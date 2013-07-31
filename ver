@@ -1,0 +1,31 @@
+%% Para visualizar
+tic
+clc
+clear all
+
+% CASE INFORMATION
+ruta='v0/results/'
+param=load([ruta 'param.dat']);
+number=param(1);
+n=param(6);
+dit=param(7);
+Nbx=param(2);
+Nby=param(3);
+
+Nsav=floor(n/dit);
+Htot=zeros(Nbx,Nby); Utot=zeros(Nbx,Nby); Vtot=zeros(Nbx,Nby);
+Qxtot=zeros(Nbx,Nby); Qytot=zeros(Nbx,Nby);
+
+mov_out=1;
+figure('Position',  [  32         136        .7*1226         .7*729])
+
+time=load('Time99.dat');
+% 
+% if mov_out==1
+% Movie=avifile('LHF_tmp','FPS',12,'compression','None','quality',100);
+% end 
+
+Vol0=zeros(fix(n/dit)+1,1);
+
+% j=1;
+k=1;
